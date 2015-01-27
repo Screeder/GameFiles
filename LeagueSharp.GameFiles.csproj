@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9FD20124-C93F-4428-93A0-3D737077A6FB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LeagueSharp.GameFiles</RootNamespace>
+    <AssemblyName>LeagueSharp.GameFiles</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PreBuildEvent />
+    <OutputPath>bin\Release</OutputPath>
+    <NuGetPackageImportStamp>d221952a</NuGetPackageImportStamp>
+    <PlatformTarget>x86</PlatformTarget>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AirClient\AirContent.cs" />
+    <Compile Include="Tools\IniBinKeys.cs" />
+    <Compile Include="Tools\ArchiveReader.cs" />
+    <Compile Include="Tools\ConfigReader.cs" />
+    <Compile Include="GameClient\Archives.cs" />
+    <Compile Include="Directories.cs" />
+    <Compile Include="GameClient\Config.cs" />
+    <Compile Include="Tools\IniBinReader.cs" />
+    <Compile Include="GameClient\Translation.cs" />
+    <Compile Include="GameClient\Items.cs" />
+    <Compile Include="GameFiles.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\SwfReader\ActionPrimitives\PrimitiveBoolean.cs" />
+    <Compile Include="Tools\SwfReader\ActionPrimitives\PrimitiveConstant16.cs" />
+    <Compile Include="Tools\SwfReader\ActionPrimitives\PrimitiveConstant8.cs" />
+    <Compile Include="Tools\SwfReader\ActionPrimitives\PrimitiveDouble.cs" />
+    <Compile Include="Tools\SwfReader\ActionPrimitives\PrimitiveFloat.cs" />
+    <Compile Include="Tools\SwfReader\ActionPrimitives\PrimitiveInteger.cs" />
+    <Compile Include="Tools\SwfReader\ActionPrimitives\PrimitiveNull.cs" />
+    <Compile Include="Tools\SwfReader\ActionPrimitives\PrimitiveRegister.cs" />
+    <Compile Include="Tools\SwfReader\ActionPrimitives\PrimitiveString.cs" />
+    <Compile Include="Tools\SwfReader\ActionPrimitives\PrimitiveType.cs" />
+    <Compile Include="Tools\SwfReader\ActionPrimitives\PrimitiveUndefined.cs" />
+    <Compile Include="Tools\SwfReader\ActionPrimitives\SwfType.cs" />
+    <Compile Include="Tools\SwfReader\AS1\ActionKind.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Add.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Add2.cs" />
+    <Compile Include="Tools\SwfReader\AS1\And.cs" />
+    <Compile Include="Tools\SwfReader\AS1\AsciiToChar.cs" />
+    <Compile Include="Tools\SwfReader\AS1\BitAnd.cs" />
+    <Compile Include="Tools\SwfReader\AS1\BitLShift.cs" />
+    <Compile Include="Tools\SwfReader\AS1\BitOr.cs" />
+    <Compile Include="Tools\SwfReader\AS1\BitRShift.cs" />
+    <Compile Include="Tools\SwfReader\AS1\BitURShift.cs" />
+    <Compile Include="Tools\SwfReader\AS1\BitXor.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Call.cs" />
+    <Compile Include="Tools\SwfReader\AS1\CallFunction.cs" />
+    <Compile Include="Tools\SwfReader\AS1\CallMethod.cs" />
+    <Compile Include="Tools\SwfReader\AS1\CastOp.cs" />
+    <Compile Include="Tools\SwfReader\AS1\CharToAscii.cs" />
+    <Compile Include="Tools\SwfReader\AS1\CloneSprite.cs" />
+    <Compile Include="Tools\SwfReader\AS1\ConstantPool.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Decrement.cs" />
+    <Compile Include="Tools\SwfReader\AS1\DefineFunction.cs" />
+    <Compile Include="Tools\SwfReader\AS1\DefineFunction2.cs" />
+    <Compile Include="Tools\SwfReader\AS1\DefineLocal.cs" />
+    <Compile Include="Tools\SwfReader\AS1\DefineLocal2.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Delete.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Delete2.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Divide.cs" />
+    <Compile Include="Tools\SwfReader\AS1\End.cs" />
+    <Compile Include="Tools\SwfReader\AS1\EndDrag.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Enumerate.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Enumerate2.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Equals.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Equals2.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Extends.cs" />
+    <Compile Include="Tools\SwfReader\AS1\GetMember.cs" />
+    <Compile Include="Tools\SwfReader\AS1\GetProperty.cs" />
+    <Compile Include="Tools\SwfReader\AS1\GetTime.cs" />
+    <Compile Include="Tools\SwfReader\AS1\GetURL.cs" />
+    <Compile Include="Tools\SwfReader\AS1\GetURL2.cs" />
+    <Compile Include="Tools\SwfReader\AS1\GetVariable.cs" />
+    <Compile Include="Tools\SwfReader\AS1\GotoFrame.cs" />
+    <Compile Include="Tools\SwfReader\AS1\GotoFrame2.cs" />
+    <Compile Include="Tools\SwfReader\AS1\GoToLabel.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Greater.cs" />
+    <Compile Include="Tools\SwfReader\AS1\IAction.cs" />
+    <Compile Include="Tools\SwfReader\AS1\IActionContainer.cs" />
+    <Compile Include="Tools\SwfReader\AS1\If.cs" />
+    <Compile Include="Tools\SwfReader\AS1\ImplementsOp.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Increment.cs" />
+    <Compile Include="Tools\SwfReader\AS1\InitArray.cs" />
+    <Compile Include="Tools\SwfReader\AS1\InitObject.cs" />
+    <Compile Include="Tools\SwfReader\AS1\InstanceOf.cs" />
+    <Compile Include="Tools\SwfReader\AS1\IPrimitive.cs" />
+    <Compile Include="Tools\SwfReader\AS1\IStackManipulator.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Jump.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Less.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Less2.cs" />
+    <Compile Include="Tools\SwfReader\AS1\MBAsciiToChar.cs" />
+    <Compile Include="Tools\SwfReader\AS1\MBCharToAscii.cs" />
+    <Compile Include="Tools\SwfReader\AS1\MBStringExtract.cs" />
+    <Compile Include="Tools\SwfReader\AS1\MBStringLength.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Modulo.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Multiply.cs" />
+    <Compile Include="Tools\SwfReader\AS1\NewMethod.cs" />
+    <Compile Include="Tools\SwfReader\AS1\NewObject.cs" />
+    <Compile Include="Tools\SwfReader\AS1\NextFrame.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Not.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Or.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Play.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Pop.cs" />
+    <Compile Include="Tools\SwfReader\AS1\PreloadFlags.cs" />
+    <Compile Include="Tools\SwfReader\AS1\PreviousFrame.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Push.cs" />
+    <Compile Include="Tools\SwfReader\AS1\PushDuplicate.cs" />
+    <Compile Include="Tools\SwfReader\AS1\RandomNumber.cs" />
+    <Compile Include="Tools\SwfReader\AS1\RemoveSprite.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Return.cs" />
+    <Compile Include="Tools\SwfReader\AS1\SetMember.cs" />
+    <Compile Include="Tools\SwfReader\AS1\SetProperty.cs" />
+    <Compile Include="Tools\SwfReader\AS1\SetTarget.cs" />
+    <Compile Include="Tools\SwfReader\AS1\SetTarget2.cs" />
+    <Compile Include="Tools\SwfReader\AS1\SetVariable.cs" />
+    <Compile Include="Tools\SwfReader\AS1\StackSwap.cs" />
+    <Compile Include="Tools\SwfReader\AS1\StartDrag.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Stop.cs" />
+    <Compile Include="Tools\SwfReader\AS1\StopSounds.cs" />
+    <Compile Include="Tools\SwfReader\AS1\StoreRegister.cs" />
+    <Compile Include="Tools\SwfReader\AS1\StrictEquals.cs" />
+    <Compile Include="Tools\SwfReader\AS1\StringAdd.cs" />
+    <Compile Include="Tools\SwfReader\AS1\StringEquals.cs" />
+    <Compile Include="Tools\SwfReader\AS1\StringExtract.cs" />
+    <Compile Include="Tools\SwfReader\AS1\StringGreater.cs" />
+    <Compile Include="Tools\SwfReader\AS1\StringLength.cs" />
+    <Compile Include="Tools\SwfReader\AS1\StringLess.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Subtract.cs" />
+    <Compile Include="Tools\SwfReader\AS1\TargetPath.cs" />
+    <Compile Include="Tools\SwfReader\AS1\ToggleQuality.cs" />
+    <Compile Include="Tools\SwfReader\AS1\ToInteger.cs" />
+    <Compile Include="Tools\SwfReader\AS1\ToNumber.cs" />
+    <Compile Include="Tools\SwfReader\AS1\ToString.cs" />
+    <Compile Include="Tools\SwfReader\AS1\Trace.cs" />
+    <Compile Include="Tools\SwfReader\AS1\TypeOf.cs" />
+    <Compile Include="Tools\SwfReader\AS1\WaitForFrame.cs" />
+    <Compile Include="Tools\SwfReader\AS1\WaitForFrame2.cs" />
+    <Compile Include="Tools\SwfReader\AS1\With.cs" />
+    <Compile Include="Tools\SwfReader\AS3\AS3_Class.cs" />
+    <Compile Include="Tools\SwfReader\AS3\AS3_Code.cs" />
+    <Compile Include="Tools\SwfReader\AS3\AS3_Exception.cs" />
+    <Compile Include="Tools\SwfReader\AS3\AS3_MemberInfo.cs" />
+    <Compile Include="Tools\SwfReader\AS3\AS3_Metadata.cs" />
+    <Compile Include="Tools\SwfReader\AS3\AS3_Method.cs" />
+    <Compile Include="Tools\SwfReader\AS3\AS3_Multiname.cs" />
+    <Compile Include="Tools\SwfReader\AS3\AS3_Namespace.cs" />
+    <Compile Include="Tools\SwfReader\AS3\AS3_Script.cs" />
+    <Compile Include="Tools\SwfReader\AS3\AS3_SlotInfo.cs" />
+    <Compile Include="Tools\SwfReader\AS3\AS3_Traits.cs" />
+    <Compile Include="Tools\SwfReader\ByteReader.cs" />
+    <Compile Include="Tools\SwfReader\enums\BitmapFormat.cs" />
+    <Compile Include="Tools\SwfReader\enums\BlendMode.cs" />
+    <Compile Include="Tools\SwfReader\enums\CapStyle.cs" />
+    <Compile Include="Tools\SwfReader\enums\ClipEvents.cs" />
+    <Compile Include="Tools\SwfReader\enums\FillType.cs" />
+    <Compile Include="Tools\SwfReader\enums\FilterKind.cs" />
+    <Compile Include="Tools\SwfReader\enums\InterpolationMode.cs" />
+    <Compile Include="Tools\SwfReader\enums\JoinStyle.cs" />
+    <Compile Include="Tools\SwfReader\enums\ShapeType.cs" />
+    <Compile Include="Tools\SwfReader\enums\SoundCompressionType.cs" />
+    <Compile Include="Tools\SwfReader\enums\SpreadMode.cs" />
+    <Compile Include="Tools\SwfReader\enums\TagType.cs" />
+    <Compile Include="Tools\SwfReader\IVexConvertable.cs" />
+    <Compile Include="Tools\SwfReader\Records\ButtonCondAction.cs" />
+    <Compile Include="Tools\SwfReader\Records\ButtonRecord.cs" />
+    <Compile Include="Tools\SwfReader\Records\ClipActionRecord.cs" />
+    <Compile Include="Tools\SwfReader\Records\ColorTransform.cs" />
+    <Compile Include="Tools\SwfReader\Records\CurvedEdgeRecord.cs" />
+    <Compile Include="Tools\SwfReader\Records\EndShapeRecord.cs" />
+    <Compile Include="Tools\SwfReader\Records\FillStyleArray.cs" />
+    <Compile Include="Tools\SwfReader\Records\GradientRecord.cs" />
+    <Compile Include="Tools\SwfReader\Records\IRecord.cs" />
+    <Compile Include="Tools\SwfReader\Records\IShapeRecord.cs" />
+    <Compile Include="Tools\SwfReader\Records\KerningRecord.cs" />
+    <Compile Include="Tools\SwfReader\Records\LineStyleArray.cs" />
+    <Compile Include="Tools\SwfReader\Records\Matrix.cs" />
+    <Compile Include="Tools\SwfReader\Records\Mp3Frame.cs" />
+    <Compile Include="Tools\SwfReader\Records\Mp3SoundData.cs" />
+    <Compile Include="Tools\SwfReader\Records\Rect.cs" />
+    <Compile Include="Tools\SwfReader\Records\RGBA.cs" />
+    <Compile Include="Tools\SwfReader\Records\SoundInfo.cs" />
+    <Compile Include="Tools\SwfReader\Records\StraightEdgeRecord.cs" />
+    <Compile Include="Tools\SwfReader\Records\StyleChangedRecord.cs" />
+    <Compile Include="Tools\SwfReader\Records\TextRecord.cs" />
+    <Compile Include="Tools\SwfReader\Records\ZoneRecord.cs" />
+    <Compile Include="Tools\SwfReader\Structures\ActionRecords.cs" />
+    <Compile Include="Tools\SwfReader\Structures\BitmapFill.cs" />
+    <Compile Include="Tools\SwfReader\Structures\ClipActions.cs" />
+    <Compile Include="Tools\SwfReader\Structures\FilterBevel.cs" />
+    <Compile Include="Tools\SwfReader\Structures\FilterBlur.cs" />
+    <Compile Include="Tools\SwfReader\Structures\FilterColorMatrix.cs" />
+    <Compile Include="Tools\SwfReader\Structures\FilterConvolution.cs" />
+    <Compile Include="Tools\SwfReader\Structures\FilterDropShadow.cs" />
+    <Compile Include="Tools\SwfReader\Structures\FilterGlow.cs" />
+    <Compile Include="Tools\SwfReader\Structures\FilterGradientBevel.cs" />
+    <Compile Include="Tools\SwfReader\Structures\FilterGradientGlow.cs" />
+    <Compile Include="Tools\SwfReader\Structures\GlyphEntry.cs" />
+    <Compile Include="Tools\SwfReader\Structures\Gradient.cs" />
+    <Compile Include="Tools\SwfReader\Structures\IFillStyle.cs" />
+    <Compile Include="Tools\SwfReader\Structures\IFilter.cs" />
+    <Compile Include="Tools\SwfReader\Structures\ILineStyle.cs" />
+    <Compile Include="Tools\SwfReader\Structures\LineStyle.cs" />
+    <Compile Include="Tools\SwfReader\Structures\LineStyle2.cs" />
+    <Compile Include="Tools\SwfReader\Structures\Shape.cs" />
+    <Compile Include="Tools\SwfReader\Structures\ShapeWithStyle.cs" />
+    <Compile Include="Tools\SwfReader\Structures\SolidFill.cs" />
+    <Compile Include="Tools\SwfReader\Structures\SoundEnvelope.cs" />
+    <Compile Include="Tools\SwfReader\SwfCompilationUnit.cs" />
+    <Compile Include="Tools\SwfReader\SwfReader.cs" />
+    <Compile Include="Tools\SwfReader\SwfWriter.cs" />
+    <Compile Include="Tools\SwfReader\Tags\BackgroundColorTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\CSMTextSettingsTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DefineBinaryDataTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DefineBitsLosslessTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DefineBitsTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DefineButton.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DefineButton2.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DefineButtonCxform.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DefineButtonSound.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DefineEditTextTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DefineFont2_3.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DefineFontAlignZonesTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DefineFontInfoTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DefineFontName.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DefineFontTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DefineShape.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DefineShape2Tag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DefineShape3Tag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DefineShape4Tag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DefineSoundTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DefineSpriteTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DefineTextTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DoABCTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\DoActionTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\EndTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\ExportAssetsTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\FileAttributesTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\FrameLabelTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\IControlTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\IPlaceObject.cs" />
+    <Compile Include="Tools\SwfReader\Tags\ISwfTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\JPEGTables.cs" />
+    <Compile Include="Tools\SwfReader\Tags\MetadataTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\PlaceObject2Tag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\PlaceObject3Tag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\PlaceObjectTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\RemoveObject2Tag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\RemoveObjectTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\ScriptLimitsTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\SerialNumberTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\ShowFrame.cs" />
+    <Compile Include="Tools\SwfReader\Tags\SoundStreamBlockTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\SoundStreamHeadTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\StartSoundTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\SwfHeader.cs" />
+    <Compile Include="Tools\SwfReader\Tags\SymbolClassTag.cs" />
+    <Compile Include="Tools\SwfReader\Tags\UnsupportedDefinitionTag.cs" />
+    <Compile Include="Tools\SwfReader\ZlibStream.cs" />
+    <Compile Include="GameSystem\Config.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Block\AlwaysLoop.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Block\Block.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Block\BooleanIndicator.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Block\Break.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Block\CompareBlock.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Block\DoEndBlock.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Block\ElseEndBlock.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Block\ForBlock.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Block\IfThenElseBlock.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Block\IfThenEndBlock.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Block\OuterBlock.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Block\RepeatBlock.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Block\SetBlock.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Block\TForBlock.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Block\WhileBlock.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Branch\AndBranch.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Branch\AssignNode.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Branch\Branch.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Branch\EQNode.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Branch\LENode.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Branch\LTNode.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Branch\NotBranch.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Branch\OrBranch.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Branch\TestNode.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Branch\TestSetNode.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Branch\TrueNode.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Code.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Constant.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Declaration.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Decompiler.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Expression\BinaryExpression.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Expression\ClosureExpression.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Expression\ConstantExpression.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Expression\Expression.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Expression\FunctionCall.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Expression\GlobalExpression.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Expression\LocalVariable.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Expression\TableLiteral.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Expression\TableReference.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Expression\UnaryExpression.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Expression\UpvalueExpression.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Expression\Vararg.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Function.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Op.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\OpcodeFormat.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\OpcodeMap.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Operation\CallOperation.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Operation\GlobalSet.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Operation\Operation.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Operation\RegisterSet.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Operation\ReturnOperation.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Operation\TableSet.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Operation\UpvalueSet.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Output.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Registers.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Statement\Assignment.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Statement\Declare.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Statement\FunctionCallStatement.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Statement\Return.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Statement\Statement.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Target\GlobalTarget.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Target\TableTarget.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Target\Target.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Target\UpvalueTarget.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Target\VariableTarget.cs" />
+    <Compile Include="Tools\LuaObjReader\Decompile\Upvalues.cs" />
+    <Compile Include="Tools\LuaObjReader\Extensions\StreamExtensions.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\BHeader.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\BInteger.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\BIntegerType.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\BList.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\BObject.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\BObjectType.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\BSizeT.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\BSizeTType.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\LBoolean.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\LBooleanType.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\LConstantType.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\LFunction.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\LFunctionType.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\LLocal.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\LLocalType.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\LNil.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\LNumber.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\LNumberType.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\LObject.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\LSourceLines.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\LString.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\LStringType.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\LUpvalue.cs" />
+    <Compile Include="Tools\LuaObjReader\Parse\LUpvalueType.cs" />
+    <Compile Include="Tools\LuaObjReader\Lua_Version.cs" />
+    <Compile Include="Versions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="LeagueSharp">
+      <HintPath>H:\Programme\LeagueSharp\System\LeagueSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LeagueSharp.Common">
+      <HintPath>..\..\..\LeagueSharpSoft\LeagueSharp\\System\LeagueSharp.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>H:\Programme\LeagueSharp\System\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Web.Extensions" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
